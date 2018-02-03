@@ -1,4 +1,4 @@
 @extends('layouts.main')
 @section('content')
-Se envio un correo para que verifique la cuenta
+We send to you a confirmation email, Please verify your account.
 @stop
