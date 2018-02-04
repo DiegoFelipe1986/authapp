@@ -12,3 +12,5 @@ Route::post('register','Auth\RegisterController@register')->name('register-post'
 Route::get('admin', 'Admin\AdminController@index')->name('admin');
 
 Route::get('users/verify/{token}', 'User\UserController@verify')->name('verify');
+Route::get('users/agents/create', 'User\UserController@showFormUserAgent')->name('form-agent');
+Route::post('users/agents/create', 'User\UserController@createUserAgent')->name('create-agent');

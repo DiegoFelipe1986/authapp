@@ -23,7 +23,7 @@ class Privilege
 
         if ($privileges == 0) {
             return Redirect(route('admin'))
-                ->withErrors(['no tiene permisos']);
+                ->withErrors(['You don\'t have permissions']);
         }
 
         return $next($request);
