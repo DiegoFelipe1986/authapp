@@ -7,6 +7,9 @@
     <body>
         <div class="container">
             @include('generic.navbar')
+            <br>
+            @include('generic.show-message')
+            @include('generic.errors-message')
             @yield('content')
         </div>
     </body>

@@ -24,10 +24,11 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'phone',
         'password',
         'verified',
         'verification_token',
-        'admin',
+        'type',
     ];
 
     /**
@@ -44,5 +45,10 @@ class User extends Authenticatable
     public static function generateVerificationToken()
     {
         return str_random(40);
+    }
+
+    public function isAdmin()
+    {
+        return $this->type == User::USER_ADMIN;
     }
 }
